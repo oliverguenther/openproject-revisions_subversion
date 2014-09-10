@@ -1,0 +1,19 @@
+<p>
+	<%= form.text_field(:url, :size => 100, :value => (repository.new_record? ? '' : repository.svn_repo_url), :disabled => !repository.new_record?) %>
+	<br />
+	<em>(file:///, http://, https://, svn://, svn+[tunnelscheme]://)</em>
+</p>
+<% if repository.new_record? %>
+	<p>
+		<%= label_tag 'create_repo', l(:label_create_repo) %>
+		<%= check_box_tag('create_repo', '1', true) %>
+	</p>
+	<p>
+		<%= form.text_field(:login, :size => 30) %>
+	</p>
+	<p>
+		<%= form.password_field(:password, :size => 30, :name => 'ignore',
+	       :onfocus => "this.value=''; this.name='repository[password]';",
+	       :onchange => "this.name='repository[password]';") %>
+	</p>
+<% end %>

@@ -1,0 +1,5 @@
+# German strings go here for Rails i18n
+de:
+  label_create_repo: 'Repository automatisch anlegen'
+  svnadmin_path: 'Pfad zu svnadmin'
+  svnadmin_desc: 'Pfad zu svnadmin. Wird zum anlegen von SVN repos aus OpenProject benötigt.'

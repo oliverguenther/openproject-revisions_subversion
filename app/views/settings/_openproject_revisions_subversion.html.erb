@@ -1,0 +1,10 @@
+<h3>Subversion</h3>
+
+<p>
+  <label><%= l(:svnadmin_path) %></label>
+  <%= text_field_tag("settings[svnadmin]",
+    Setting.plugin_openproject_revisions_subversion[:svnadmin], :size => 10)
+  %>
+  <br />
+  <em><%= l(:svnadmin_desc) %></em>
+</p>

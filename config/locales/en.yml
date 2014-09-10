@@ -1,0 +1,5 @@
+# English strings go here for Rails i18n
+en:
+  label_create_repo: 'Create local Repository'
+  svnadmin_path: 'svnadmin program path'
+  svnadmin_desc: 'svnadmin executable used to create svn repository.'
