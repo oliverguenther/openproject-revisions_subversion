@@ -3,8 +3,18 @@
 <p>
   <label><%= l(:svnadmin_path) %></label>
   <%= text_field_tag("settings[svnadmin]",
-    Setting.plugin_openproject_revisions_subversion[:svnadmin], :size => 10)
+    Setting.plugin_openproject_revisions_subversion[:svnadmin], :size => 30)
   %>
   <br />
   <em><%= l(:svnadmin_desc) %></em>
 </p>
+
+<p>
+  <label><%= l(:repositories_root) %></label>
+  <%= text_field_tag("settings[repositories_root]",
+    Setting.plugin_openproject_revisions_subversion[:repositories_root], :size => 50)
+  %>
+  <br />
+  <em><%= l(:repositories_root_desc) %></em>
+</p>
+

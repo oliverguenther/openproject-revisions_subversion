@@ -2,4 +2,6 @@
 de:
   label_create_repo: 'Repository automatisch anlegen'
   svnadmin_path: 'Pfad zu svnadmin'
+  repositories_root: 'Speicherort'
+  repositories_root_desc: 'Ordner, in denen SVN Repositories angelegt werden.'
   svnadmin_desc: 'Pfad zu svnadmin. Wird zum anlegen von SVN repos aus OpenProject benötigt.'
