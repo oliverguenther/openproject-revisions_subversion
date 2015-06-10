@@ -5,3 +5,8 @@ en:
   repositories_root: 'Repository storage'
   repositories_root_desc: 'Parent path to subversion repositories'
   svnadmin_desc: 'svnadmin executable used to create svn repository.'
+  repositories_svn_creation: 'Creates a local SVN repository, accessible by https'
+  svn_url_hostname: 'SVN server hostname'
+  repositories_svn_url_hostname_desc: 'Enter the hostname of the svn checkout url (https://<hostname><path>/<projectname>)'
+  svn_url_path: 'SVN server URL path'
+  repositories_svn_url_path_desc: 'Enter the path of the svn checkout url (https://<hostname><path>/<projectname>) with a leading slash e.g., (/svn)'

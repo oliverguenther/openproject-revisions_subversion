@@ -5,3 +5,8 @@ de:
   repositories_root: 'Speicherort'
   repositories_root_desc: 'Ordner, in denen SVN Repositories angelegt werden.'
   svnadmin_desc: 'Pfad zu svnadmin. Wird zum anlegen von SVN repos aus OpenProject benötigt.'
+  repositories_svn_creation: 'Erstellt ein lokales SVN Repository, das für Sie per https zugänglich ist.'
+  svn_url_hostname: 'SVN Server Hostname'
+  repositories_svn_url_hostname_desc: 'Hostname des SVN Servers für die Checkout URL (https://<hostname><path>/<projectname>)'
+  svn_url_path: 'SVN Server URL Pfad'
+  repositories_svn_url_path_desc: 'Pfad des SVN Servers für die SVN checkout URL (https://<hostname><path>/<projectname>). Mit vorangehendem Slash angeben, z.B. (/svn)'  

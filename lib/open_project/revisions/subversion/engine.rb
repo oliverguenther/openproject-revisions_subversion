@@ -8,10 +8,19 @@ module OpenProject::Revisions::Subversion
     engine_name :openproject_revisions_subversion
 
 
+    def self.default_hostname
+      Socket.gethostname || 'localhost'
+    rescue
+      nil
+    end
+
+
     def self.settings
       { :partial => 'settings/openproject_revisions_subversion',
         :default => {
           :svnadmin => 'svnadmin',
+          :svn_url_hostname => default_hostname,
+          :svn_url_path => '/svn',
           :repositories_root => File.join(Dir.home, 'repositories', 'svn').to_s,
         }
       }

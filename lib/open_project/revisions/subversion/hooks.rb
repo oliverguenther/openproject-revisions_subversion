@@ -26,9 +26,8 @@ module OpenProject::Revisions::Subversion::Hooks
 
     def repository_edit_request(context)
       c = context[:controller]
-      if c.params[:create_repo]
-        c.params[:repository][:url] = context[:repository].svn_repo_url
-      end
+      c.params[:repository] = {} unless c.params[:repository].present?
+      c.params[:repository][:url] = context[:repository].svn_repo_url
     end
 
     def repository_edited(context)

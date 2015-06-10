@@ -18,3 +18,21 @@
   <em><%= l(:repositories_root_desc) %></em>
 </p>
 
+<p>
+  <label><%= l(:svn_url_hostname) %></label>
+  <%= text_field_tag("settings[svn_url_hostname]",
+    Setting.plugin_openproject_revisions_subversion[:svn_url_hostname], :size => 50)
+  %>
+  <br />
+  <em><%= l(:repositories_svn_url_hostname_desc) %></em>
+</p>
+
+<p>
+  <label><%= l(:svn_url_path) %></label>
+  <%= text_field_tag("settings[svn_url_path]",
+    Setting.plugin_openproject_revisions_subversion[:svn_url_path], :size => 50)
+  %>
+  <br />
+  <em><%= l(:repositories_svn_url_path_desc) %></em>
+</p>
+

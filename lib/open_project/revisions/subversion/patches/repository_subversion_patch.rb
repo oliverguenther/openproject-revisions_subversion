@@ -21,34 +21,19 @@ module OpenProject::Revisions::Subversion
         end
 
         def svn_repo_url
-          ['file://', svn_repo_path].join
+          [
+            'https://',
+            Setting.plugin_openproject_revisions_subversion[:svn_url_hostname],
+            Setting.plugin_openproject_revisions_subversion[:svn_url_path],
+            '/',
+            svn_repository_name].join
         end
 
-        # Returns the repository name
-        #
-        # e.g., Project Foo, Subproject Bar => 'foo/bar'
         def svn_repository_name
-          if (parent_path = get_full_parent_path).empty?
-            project.identifier
-          else
-            File.join(parent_path, project.identifier)
-          end
-        end
-
-        def get_full_parent_path
-          parent_parts = []
-          p = project
-          while p.parent
-            parent_id = p.parent.identifier.to_s
-            parent_parts.unshift(parent_id)
-            p = p.parent
-          end
-
-          return parent_parts.join("/")
+          project.identifier
         end
 
       end
-
     end
   end
 end
