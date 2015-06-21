@@ -15,6 +15,17 @@ module OpenProject::Revisions::Subversion
 
       module InstanceMethods
 
+        def scm
+          @scm ||= scm_adapter.new(local_svn_url, local_svn_url,
+                                   login, password, path_encoding)
+          update_attribute(:root_url, @scm.root_url) if root_url.blank?
+          @scm
+        end
+
+        def local_svn_url
+          "file://#{svn_repo_path}"
+        end
+
         def svn_repo_path
           root = Setting.plugin_openproject_revisions_subversion[:repositories_root]
           File.join(File.expand_path(root), svn_repository_name)
